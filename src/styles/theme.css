@@ -1,0 +1,26 @@
+.light{
+  background:
+  linear-gradient(
+    135deg,
+    #f8fafc,
+    #dbeafe
+  );
+
+  color:#0f172a;
+  min-height:100vh;
+  transition:0.3s;
+}
+
+.dark{
+  background:
+  linear-gradient(
+    135deg,
+    #020617,
+    #0f172a,
+    #111827
+  );
+
+  color:white;
+  min-height:100vh;
+  transition:0.3s;
+}

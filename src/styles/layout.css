@@ -1,0 +1,57 @@
+.main-layout{
+  display:flex;
+}
+
+.main-content{
+  width:100%;
+  margin-left:260px;
+  min-height:100vh;
+}
+
+.page-content{
+  padding:30px;
+}
+.app-layout{
+  display:flex;
+
+  min-height:100vh;
+
+  overflow:hidden;
+}
+
+.main-content{
+  flex:1;
+
+  margin-left:280px;
+
+  min-height:100vh;
+
+  transition:0.3s ease;
+
+  overflow-x:hidden;
+}
+
+.page-content{
+  padding:30px;
+
+  width:100%;
+}
+
+@media(max-width:992px){
+
+  .main-content{
+    margin-left:90px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .page-content{
+    padding:20px;
+  }
+
+}
+.page-content{
+  padding:120px 30px 30px;
+}

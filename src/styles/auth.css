@@ -1,0 +1,297 @@
+.auth-page{
+  width:100%;
+  min-height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:30px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b,
+    #2563eb
+  );
+
+  overflow:hidden;
+
+  position:relative;
+}
+
+/* =========================
+   BACKGROUND EFFECTS
+========================= */
+
+.auth-page::before{
+  content:"";
+
+  position:absolute;
+
+  width:450px;
+  height:450px;
+
+  border-radius:50%;
+
+  background:
+  rgba(255,255,255,0.08);
+
+  top:-120px;
+  right:-120px;
+
+  filter:blur(10px);
+}
+
+.auth-page::after{
+  content:"";
+
+  position:absolute;
+
+  width:350px;
+  height:350px;
+
+  border-radius:50%;
+
+  background:
+  rgba(59,130,246,0.25);
+
+  bottom:-100px;
+  left:-100px;
+
+  filter:blur(20px);
+}
+
+/* =========================
+   AUTH CARD
+========================= */
+
+.auth-card,
+.role-selector-card{
+  width:100%;
+  max-width:430px;
+
+  padding:45px;
+
+  border-radius:32px;
+
+  position:relative;
+  z-index:2;
+
+  backdrop-filter:blur(22px);
+
+  background:
+  rgba(255,255,255,0.08);
+
+  border:
+  1px solid rgba(255,255,255,0.15);
+
+  box-shadow:
+  0 20px 60px rgba(0,0,0,0.25);
+
+  animation:fadeUp 0.6s ease;
+}
+
+/* =========================
+   TITLES
+========================= */
+
+.auth-card h1,
+.role-selector-card h1{
+  font-size:36px;
+  font-weight:700;
+
+  color:white;
+
+  text-align:center;
+
+  margin-bottom:10px;
+}
+
+.auth-card p,
+.role-selector-card p{
+  text-align:center;
+
+  color:#cbd5e1;
+
+  margin-bottom:35px;
+
+  font-size:15px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.auth-form{
+  display:flex;
+  flex-direction:column;
+
+  gap:20px;
+}
+
+.auth-form input{
+  width:100%;
+
+  padding:16px 18px;
+
+  border:none;
+  outline:none;
+
+  border-radius:18px;
+
+  background:
+  rgba(255,255,255,0.12);
+
+  color:white;
+
+  font-size:15px;
+
+  transition:0.3s ease;
+}
+
+.auth-form input::placeholder{
+  color:#cbd5e1;
+}
+
+.auth-form input:focus{
+  background:
+  rgba(255,255,255,0.18);
+
+  box-shadow:
+  0 0 0 3px rgba(59,130,246,0.35);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.auth-form button,
+.role-buttons button{
+  width:100%;
+
+  padding:16px;
+
+  border:none;
+
+  border-radius:18px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #3b82f6,
+    #2563eb
+  );
+
+  color:white;
+
+  font-size:15px;
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:0.3s ease;
+}
+
+.auth-form button:hover,
+.role-buttons button:hover{
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 12px 25px rgba(37,99,235,0.35);
+}
+
+/* =========================
+   ROLE BUTTONS
+========================= */
+
+.role-buttons{
+  display:flex;
+  flex-direction:column;
+
+  gap:20px;
+}
+
+/* =========================
+   LOGIN LINKS
+========================= */
+
+.auth-extra{
+  margin-top:25px;
+
+  text-align:center;
+
+  color:#cbd5e1;
+
+  font-size:14px;
+}
+
+.auth-extra span{
+  color:#60a5fa;
+
+  cursor:pointer;
+
+  font-weight:600;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+
+    transform:
+    translateY(40px);
+  }
+
+  to{
+    opacity:1;
+
+    transform:
+    translateY(0);
+  }
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+  .auth-card,
+  .role-selector-card{
+    padding:35px 25px;
+  }
+
+  .auth-card h1,
+  .role-selector-card h1{
+    font-size:30px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .auth-page{
+    padding:20px;
+  }
+
+  .auth-card,
+  .role-selector-card{
+    border-radius:24px;
+
+    padding:30px 22px;
+  }
+
+  .auth-form input,
+  .auth-form button,
+  .role-buttons button{
+    padding:15px;
+  }
+
+}

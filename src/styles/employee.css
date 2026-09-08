@@ -1,0 +1,695 @@
+.employee-dashboard-container{
+  width:100%;
+}
+
+/* =========================
+   COMMON GLASS CARD
+========================= */
+
+.employee-widget,
+.employee-stat-card,
+.employee-task-stat-card,
+.employee-attendance-card,
+.employee-performance-card,
+.employee-task-card,
+.employee-chat-sidebar,
+.employee-chat-window,
+.employee-online-users{
+  border-radius:24px;
+
+  padding:24px;
+
+  backdrop-filter:blur(18px);
+
+  transition:0.3s ease;
+}
+
+.light .employee-widget,
+.light .employee-stat-card,
+.light .employee-task-stat-card,
+.light .employee-attendance-card,
+.light .employee-performance-card,
+.light .employee-task-card,
+.light .employee-chat-sidebar,
+.light .employee-chat-window,
+.light .employee-online-users{
+  background:rgba(255,255,255,0.55);
+
+  border:1px solid rgba(255,255,255,0.4);
+
+  box-shadow:
+  0 8px 32px rgba(0,0,0,0.08);
+}
+
+.dark .employee-widget,
+.dark .employee-stat-card,
+.dark .employee-task-stat-card,
+.dark .employee-attendance-card,
+.dark .employee-performance-card,
+.dark .employee-task-card,
+.dark .employee-chat-sidebar,
+.dark .employee-chat-window,
+.dark .employee-online-users{
+  background:rgba(255,255,255,0.05);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+  0 8px 32px rgba(0,0,0,0.25);
+}
+
+.employee-widget:hover,
+.employee-stat-card:hover,
+.employee-task-card:hover{
+  transform:translateY(-4px);
+}
+
+/* =========================
+   TITLES
+========================= */
+
+.widget-title{
+  font-size:22px;
+  font-weight:700;
+
+  margin-bottom:20px;
+}
+
+.dashboard-title{
+  font-size:34px;
+  font-weight:700;
+}
+
+.dashboard-subtitle{
+  margin-top:6px;
+
+  color:#94a3b8;
+}
+
+/* =========================
+   DASHBOARD STATS
+========================= */
+
+.employee-stats-grid,
+.employee-performance-grid,
+.employee-attendance-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+
+  gap:20px;
+
+  margin-bottom:25px;
+}
+
+.employee-stat-card h1,
+.employee-performance-card h1,
+.employee-attendance-card h1{
+  margin-top:14px;
+
+  font-size:38px;
+  font-weight:700;
+}
+
+/* =========================
+   SECTION LAYOUT
+========================= */
+
+.employee-dashboard-sections{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+
+  gap:20px;
+
+  margin-bottom:20px;
+}
+
+/* =========================
+   LIST ITEMS
+========================= */
+
+.employee-task-list,
+.employee-activity-list,
+.employee-history-list,
+.employee-notes-history-list,
+.employee-report-history-list,
+.employee-leave-history-list,
+.employee-kpi-list,
+.employee-files-list,
+.employee-recent-files,
+.employee-chat-list,
+.employee-users-list,
+.team-members-list,
+.team-task-list,
+.shared-notes-list,
+.employee-activity-timeline,
+.employee-productivity-list,
+.employee-login-list,
+.employee-notification-list,
+.employee-alert-list{
+  display:flex;
+  flex-direction:column;
+
+  gap:14px;
+}
+
+.employee-task-item,
+.employee-activity-item,
+.employee-history-item,
+.employee-notes-item,
+.employee-report-item,
+.employee-leave-item,
+.employee-kpi-item,
+.employee-file-item,
+.employee-recent-file,
+.employee-chat-item,
+.employee-user-item,
+.team-member-card,
+.team-task-card,
+.shared-note-item,
+.employee-timeline-item,
+.employee-productivity-item,
+.employee-login-item,
+.employee-notification-item,
+.employee-alert-item{
+  padding:16px 18px;
+
+  border-radius:16px;
+
+  transition:0.3s ease;
+}
+
+.light .employee-task-item,
+.light .employee-activity-item,
+.light .employee-history-item,
+.light .employee-notes-item,
+.light .employee-report-item,
+.light .employee-leave-item,
+.light .employee-kpi-item,
+.light .employee-file-item,
+.light .employee-recent-file,
+.light .employee-chat-item,
+.light .employee-user-item,
+.light .team-member-card,
+.light .team-task-card,
+.light .shared-note-item,
+.light .employee-timeline-item,
+.light .employee-productivity-item,
+.light .employee-login-item,
+.light .employee-notification-item,
+.light .employee-alert-item{
+  background:rgba(255,255,255,0.45);
+}
+
+.dark .employee-task-item,
+.dark .employee-activity-item,
+.dark .employee-history-item,
+.dark .employee-notes-item,
+.dark .employee-report-item,
+.dark .employee-leave-item,
+.dark .employee-kpi-item,
+.dark .employee-file-item,
+.dark .employee-recent-file,
+.dark .employee-chat-item,
+.dark .employee-user-item,
+.dark .team-member-card,
+.dark .team-task-card,
+.dark .shared-note-item,
+.dark .employee-timeline-item,
+.dark .employee-productivity-item,
+.dark .employee-login-item,
+.dark .employee-notification-item,
+.dark .employee-alert-item{
+  background:rgba(255,255,255,0.05);
+}
+
+.employee-task-item:hover,
+.employee-chat-item:hover,
+.team-member-card:hover{
+  transform:translateX(5px);
+}
+
+/* =========================
+   QUICK ACTION BUTTONS
+========================= */
+
+.employee-actions-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+
+  gap:15px;
+}
+
+.employee-actions-grid button,
+.employee-checkin-btn,
+.employee-checkout-btn,
+.employee-report-form button,
+.employee-leave-form button,
+.employee-profile-form button,
+.employee-chat-input button,
+.employee-upload-box button{
+  padding:14px;
+
+  border:none;
+
+  border-radius:14px;
+
+  background:linear-gradient(
+    135deg,
+    #3b82f6,
+    #2563eb
+  );
+
+  color:white;
+
+  cursor:pointer;
+
+  font-weight:600;
+
+  transition:0.3s ease;
+}
+
+.employee-actions-grid button:hover,
+.employee-checkin-btn:hover,
+.employee-checkout-btn:hover,
+.employee-report-form button:hover,
+.employee-leave-form button:hover,
+.employee-profile-form button:hover,
+.employee-chat-input button:hover,
+.employee-upload-box button:hover{
+  transform:translateY(-2px);
+
+  opacity:0.9;
+}
+
+/* =========================
+   PERFORMANCE SCORE
+========================= */
+
+.employee-performance-score{
+  height:240px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-size:64px;
+  font-weight:700;
+
+  color:#3b82f6;
+}
+
+/* =========================
+   TASKS
+========================= */
+
+.employee-task-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+
+  gap:20px;
+
+  margin-bottom:25px;
+}
+
+.employee-task-board{
+  display:flex;
+  flex-direction:column;
+
+  gap:20px;
+}
+
+.employee-task-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.employee-priority{
+  padding:6px 12px;
+
+  border-radius:12px;
+
+  font-size:12px;
+  font-weight:700;
+
+  color:white;
+}
+
+.employee-priority.high{
+  background:#ef4444;
+}
+
+.employee-priority.medium{
+  background:#f59e0b;
+}
+
+.employee-priority.low{
+  background:#10b981;
+}
+
+.employee-task-status,
+.employee-task-due{
+  margin-top:10px;
+
+  color:#94a3b8;
+}
+
+/* =========================
+   FORMS
+========================= */
+
+.employee-notes-textarea,
+.employee-report-form input,
+.employee-report-form textarea,
+.employee-leave-form input,
+.employee-leave-form select,
+.employee-profile-form input,
+.employee-chat-input input{
+  width:100%;
+
+  padding:16px;
+
+  border:none;
+  outline:none;
+
+  border-radius:16px;
+
+  background:rgba(255,255,255,0.12);
+
+  color:inherit;
+
+  font-size:15px;
+}
+
+.employee-report-form,
+.employee-leave-form,
+.employee-profile-form{
+  display:flex;
+  flex-direction:column;
+
+  gap:15px;
+}
+
+.employee-notes-textarea{
+  min-height:260px;
+
+  resize:none;
+}
+
+/* =========================
+   AUTOSAVE
+========================= */
+
+.employee-autosave-box{
+  height:260px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.employee-autosave-box h1{
+  font-size:52px;
+}
+
+/* =========================
+   MESSAGES
+========================= */
+
+.employee-messages-layout{
+  display:grid;
+  grid-template-columns:1fr 2fr 1fr;
+
+  gap:20px;
+}
+
+.employee-chat-header{
+  font-size:22px;
+  font-weight:700;
+
+  margin-bottom:20px;
+}
+
+.employee-chat-messages{
+  height:420px;
+
+  overflow:auto;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:15px;
+}
+
+.employee-message{
+  padding:14px 18px;
+
+  border-radius:16px;
+
+  max-width:70%;
+}
+
+.employee-message.sent{
+  align-self:flex-end;
+
+  background:#3b82f6;
+
+  color:white;
+}
+
+.light .employee-message.received{
+  background:rgba(255,255,255,0.4);
+}
+
+.dark .employee-message.received{
+  background:rgba(255,255,255,0.08);
+}
+
+.employee-chat-input{
+  margin-top:20px;
+
+  display:flex;
+
+  gap:15px;
+}
+
+.online-dot{
+  width:10px;
+  height:10px;
+
+  border-radius:50%;
+
+  background:#10b981;
+
+  display:inline-block;
+
+  margin-right:10px;
+}
+
+/* =========================
+   PROFILE
+========================= */
+
+.employee-profile-card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  text-align:center;
+}
+
+.employee-avatar{
+  width:120px;
+  height:120px;
+
+  border-radius:50%;
+
+  background:linear-gradient(
+    135deg,
+    #3b82f6,
+    #2563eb
+  );
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  color:white;
+
+  font-size:48px;
+  font-weight:700;
+}
+
+.employee-profile-name{
+  margin-top:20px;
+
+  font-size:28px;
+  font-weight:700;
+}
+
+.employee-profile-role{
+  margin-top:10px;
+
+  color:#94a3b8;
+}
+
+.employee-profile-performance{
+  margin-top:18px;
+
+  padding:12px 20px;
+
+  border-radius:14px;
+
+  background:#10b981;
+
+  color:white;
+
+  font-weight:600;
+}
+
+.employee-availability-box{
+  display:flex;
+  flex-wrap:wrap;
+
+  gap:15px;
+}
+
+.availability-item{
+  padding:14px 22px;
+
+  border-radius:14px;
+
+  color:white;
+
+  font-weight:600;
+}
+
+.available{
+  background:#10b981;
+}
+
+.busy{
+  background:#f59e0b;
+}
+
+.offline{
+  background:#ef4444;
+}
+
+/* =========================
+   FILE UPLOAD
+========================= */
+
+.employee-upload-box{
+  height:220px;
+
+  border:2px dashed #3b82f6;
+
+  border-radius:20px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  gap:18px;
+}
+
+/* =========================
+   SETTINGS
+========================= */
+
+.employee-settings-list,
+.employee-security-list{
+  display:flex;
+  flex-direction:column;
+
+  gap:15px;
+}
+
+.employee-setting-item,
+.employee-security-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:16px;
+
+  border-radius:16px;
+}
+
+.light .employee-setting-item,
+.light .employee-security-item{
+  background:rgba(255,255,255,0.4);
+}
+
+.dark .employee-setting-item,
+.dark .employee-security-item{
+  background:rgba(255,255,255,0.05);
+}
+
+.employee-setting-item input{
+  width:18px;
+  height:18px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+  .employee-dashboard-sections,
+  .employee-messages-layout{
+    grid-template-columns:1fr;
+  }
+
+  .employee-stats-grid,
+  .employee-performance-grid,
+  .employee-attendance-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:768px){
+
+  .employee-stats-grid,
+  .employee-performance-grid,
+  .employee-attendance-grid,
+  .employee-task-stats{
+    grid-template-columns:1fr;
+  }
+
+  .employee-actions-grid{
+    grid-template-columns:1fr;
+  }
+
+  .employee-chat-input{
+    flex-direction:column;
+  }
+
+  .employee-availability-box{
+    flex-direction:column;
+  }
+
+}
+
+@media(max-width:576px){
+
+  .employee-widget,
+  .employee-stat-card,
+  .employee-task-card{
+    padding:18px;
+  }
+
+  .dashboard-title{
+    font-size:28px;
+  }
+
+  .widget-title{
+    font-size:20px;
+  }
+
+}

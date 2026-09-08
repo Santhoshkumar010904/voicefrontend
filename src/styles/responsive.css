@@ -1,0 +1,150 @@
+@media(max-width:1400px){
+
+  .dashboard-cards,
+  .employee-stats-grid,
+  .employee-performance-grid,
+  .employee-attendance-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .analytics-grid,
+  .realtime-grid,
+  .shared-files-grid,
+  .team-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:1200px){
+
+  .dashboard-sections,
+  .tasks-sections,
+  .employee-dashboard-sections,
+  .calendar-sections,
+  .settings-grid,
+  .activity-sections,
+  .team-sections,
+  .files-sections{
+    grid-template-columns:1fr;
+  }
+
+  .employee-messages-layout{
+    grid-template-columns:1fr;
+  }
+
+  .task-board{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:992px){
+
+  .sidebar{
+    width:90px;
+  }
+
+  .sidebar-logo{
+    font-size:20px;
+  }
+
+  .sidebar-link{
+    justify-content:center;
+  }
+
+  .sidebar-link span{
+    display:none;
+  }
+
+  .navbar{
+    padding:20px;
+  }
+
+  .main-content{
+    margin-left:90px;
+  }
+
+  .dashboard-cards,
+  .employee-stats-grid,
+  .employee-performance-grid,
+  .employee-attendance-grid,
+  .team-grid,
+  .shared-files-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .navbar{
+    flex-direction:column;
+
+    gap:20px;
+
+    align-items:flex-start;
+  }
+
+  .dashboard-title{
+    font-size:28px;
+  }
+
+  .dashboard-subtitle{
+    font-size:14px;
+  }
+
+  .page-content{
+    padding:20px;
+  }
+
+  .tasks-header,
+  .dashboard-header,
+  .employees-header,
+  .analytics-header,
+  .attendance-header,
+  .reports-header,
+  .calendar-header,
+  .settings-header,
+  .team-header,
+  .activity-header{
+    flex-direction:column;
+
+    gap:20px;
+
+    align-items:flex-start;
+  }
+
+}
+
+@media(max-width:576px){
+
+  .sidebar{
+    width:75px;
+  }
+
+  .main-content{
+    margin-left:75px;
+  }
+
+  .sidebar-link{
+    font-size:18px;
+  }
+
+  .dashboard-title{
+    font-size:24px;
+  }
+
+  .widget-title{
+    font-size:20px;
+  }
+
+  .employee-actions-grid{
+    grid-template-columns:1fr;
+  }
+
+  .employee-check-buttons{
+    flex-direction:column;
+  }
+
+}
